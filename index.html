@@ -7,42 +7,66 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?jungle,forest') no-repeat center center fixed;
-            background-size: cover;
+            background: #003300; /* Deep Green */
             color: white;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
+
+        /* 🌿 Forest Animation */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?forest') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.3; /* Faint background */
+            z-index: -1;
+        }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 50, 0, 0.8);
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
+
         h1 {
-            font-size: 2em;
+            font-size: 2.5rem;
             text-shadow: 2px 2px 5px black;
         }
+
         .video-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
             margin: 20px 0;
             padding: 15px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            width: 100%;
         }
+
         video {
-            width: 300px;
+            width: 100%;
+            max-width: 600px;
             border-radius: 10px;
-            margin-right: 20px;
         }
+
         .video-title {
             font-size: 1.2em;
             font-weight: bold;
+            margin-top: 10px;
             text-shadow: 1px 1px 5px black;
         }
+
         .qr-code {
             margin-top: 20px;
         }
@@ -134,7 +158,7 @@
         
         <div class="qr-code">
             <p>Scan to visit this site:</p>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://jesvithak.github.io/EndangeredAnimals/" alt="QR Code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://jesvithak.github.io/Endangered-Animals/" alt="QR Code">
         </div>
     </div>
 </body>
